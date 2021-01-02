@@ -1,0 +1,184 @@
+/* Some general sytyling about width and lateral margins */
+.container{
+	max-width: 850px;
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header h1{
+	text-align: center;
+}
+
+/* Styling to the main content, form and table */
+#main-content{
+	margin-top: 70px;
+	display: flex;
+	justify-content: space-between;
+}
+
+form{
+	width: 45%;
+	height: 270px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.entry{
+	display: flex;
+	width: 100%;
+	background-color: white;
+}
+
+.incorrect-input{
+	margin-top: 7px;
+	font-size: 1.07rem;
+	color: rgb(255, 0, 0);
+	visibility: hidden;
+}
+
+input[type="text"]{
+	padding: 13px 10px;
+	font-size: 1.3rem;
+	width: 100%;
+	border: 1px solid rgb(212, 212, 238);
+}
+
+input[type="text"]:hover, select:hover{
+	border: 1px solid coral;
+}
+
+input[type="text"]:focus, select:focus{
+	outline: none;
+}
+
+select{
+	font-size: 1.2rem;
+	padding-left: 3px;
+	border: 1px solid rgb(212, 212, 238);
+	border-left: none;
+}
+
+input[type="button"]{
+	width: 100%;
+	font-size: 1.3rem;
+	padding: 10px 10px;
+	border: 1px solid rgb(212, 212, 238);
+	border-radius: 10px;
+	color:white;
+	text-shadow: 1px 1px 1px black;
+	background-color:coral;
+	letter-spacing: 0.3px;
+}
+
+input[type="button"]:hover{
+	background-color: rgb(255, 103, 48);
+	transition: background-color ease-in-out 100ms;
+	cursor: pointer;
+}
+
+input[type="button"]:focus{
+	outline: none;
+}
+
+table{
+	width: 45%;
+	height: 270px;
+	font-size: 1.25rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+td{
+	padding: 0 10px;
+	border: 1px solid rgb(212, 212, 238);
+	border-top: none;
+}
+
+tr{background-color: white;}
+
+tr:first-child td{
+	border-top: 1px solid rgb(212, 212, 238);
+}
+
+td:nth-child(odd){
+	border-right: none;
+}
+
+td:nth-child(even){
+	text-align: right;
+}
+
+/* Styling to the div where the result of the calculation is shown */
+#result{
+	margin-top: 70px;
+	font-size: 1.2rem;
+	font-weight: 300;
+	background-color: white;
+	border: 1px solid rgb(212, 212, 238);
+	padding: 10px 30px;
+	width: fit-content;
+	display: none;
+}
+
+section p{
+	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	font-size: 1.1rem;
+	word-spacing: 2px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 885px){
+	header{
+		padding-top: 20px;
+	}
+	header h1, #result, section p{
+		text-align: center;
+	}
+	.container{
+		max-width: 600px;
+	}
+	#main-content{
+		max-width: 400px;
+		flex-direction: column;
+	}
+	form, table{
+		width: 100%;
+	}
+	form{
+		margin-bottom: 70px;
+	}
+	table{
+		height: 250px;
+	}
+	/* Change color and backgound of the div that shows the result to highlight it from the rest */
+	#result{
+		margin-top: 50px;
+		background-color: coral;
+		text-shadow: 1px 1px 1px black;
+		color: white;
+		border-radius: 10px;
+	}
+
+}
+
+/* Lessens the vertical margins to make things closer in smaller screens */
+@media (max-width: 400px){
+	#main-content{
+		margin-top: 50px;
+		height: auto;
+	}
+	form{
+		height: 245px;
+		margin-bottom: 50px;
+	}
+	table{
+		height: 225px;
+	}
+	section p{
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+}
